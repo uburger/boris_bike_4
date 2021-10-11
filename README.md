@@ -24,3 +24,19 @@ DockingStation  release_bike
 
 Person >> is bike available >> if yes > bike (docking station object) >> if not >> sorry message 
 Bike, docking station >> if bike is working >> release bike 
+
+## Debugging 
+
+3.0.0 :001 > docking_station = DockingStation
+Traceback (most recent call last):
+        4: from /Users/yasmin.jones/.rvm/rubies/ruby-3.0.0/bin/irb:23:in `<main>'
+        3: from /Users/yasmin.jones/.rvm/rubies/ruby-3.0.0/bin/irb:23:in `load'
+        2: from /Users/yasmin.jones/.rvm/rubies/ruby-3.0.0/lib/ruby/gems/3.0.0/gems/irb-1.3.0/exe/irb:11:in `<top (required)>'
+        1: from (irb):1:in `<main>'
+NameError (uninitialized constant DockingStation)
+3.0.0 :002 > class DockingStation
+3.0.0 :003 > end 
+ => nil 
+3.0.0 :004 > docking_station = DockingStation
+ => DockingStation 
+3.0.0 :005 > 
