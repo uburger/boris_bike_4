@@ -5,20 +5,27 @@ class DockingStation
 
     def initialize
         @a_bike = a_bike
-        @bikes_docked = []
+        @bikes_docked = [@a_bike]
     end
 
     def release_bike
         @a_bike = @bikes_docked.last
+        @bikes_docked.pop
+        return @a_bike
+        
 
     end 
 
-    def dock_bike
-        return "Bike #{@a_bike} docked"
+    def dock(bike)
+        bike
     end
 
     def has_bike?
-        true
+        if @bikes_docked == []
+            return false
+        else 
+            return true
+        end
     end
 end
 
