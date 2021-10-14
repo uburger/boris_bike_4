@@ -3,10 +3,10 @@ require 'docking_station'
 describe DockingStation do
 
     it 'releases a bike' do
-    
+      bike = Bike.new
       station = DockingStation.new
-  
-      expect(station).to respond_to :release_bike
+      station.dock(bike)
+      expect(station.release_bike).to eq (bike)
     end
 
     it 'releases a working bike' do
