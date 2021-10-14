@@ -22,7 +22,7 @@ describe DockingStation do
       station = DockingStation.new
       bike = Bike.new
 
-      expect(station.dock(bike)).to eq bike
+      expect(station.dock(bike)).to eq [bike]
 
     end
 
@@ -40,11 +40,11 @@ describe DockingStation do
       expect { station.release_bike }.to raise_error "No bike available" 
     end
 
-    it 'throws ans error if station is full' do 
+    it 'throws an error if station is full' do 
       station = DockingStation.new
       bike = Bike.new
 
-      station.dock(bike)
+      20.times { station.dock(bike)}
       expect { station.dock(bike) }.to raise_error "Station is full"
 
     end
